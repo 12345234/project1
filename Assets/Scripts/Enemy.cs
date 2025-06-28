@@ -1,14 +1,20 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 using static UnityEngine.GraphicsBuffer;
 
 public class Enemy : MonoBehaviour
 {
-    /// <summary>  
-    /// プレイヤー  
-    /// </summary>  
-    [SerializeField] private Player player_ = null;
+	//線
+	[SerializeField] private GameObject senter;
+	[SerializeField] private float angle;//角度
+     public float view { get => angle * Mathf.Deg2Rad; }
+	/// <summary>  
+	/// プレイヤー  
+	/// </summary>  
+	[SerializeField] private Player player_ = null;
 
     /// <summary>  
     /// ワールド行列   
@@ -38,5 +44,6 @@ public class Enemy : MonoBehaviour
     /// </summary>  
     public void Update()
     {
+
     }
 }
